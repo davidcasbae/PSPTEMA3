@@ -40,7 +40,7 @@ def servidor_tcp():
         hilo_cliente = threading.Thread(target=cliente, args=(conn, addr))
         hilo_cliente.start()
         print(f"[ACTIVO] Número de conexiones activas: {threading.active_count() - 1}")
-    s.close()
+
 
 if __name__ == "__main__":
     servidor_tcp()
